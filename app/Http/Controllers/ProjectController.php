@@ -8,9 +8,10 @@ class ProjectController extends Controller
 {
     //
 
-    public function getData(Request $request)
+
+    public function getAllDepartments(Request $request)
     {
-        $data = $request->all();
-        return view('index', compact('data'));
+        $departments = Department::all();
+        return view('index', ('departments') -> $departments);
     }
 }
