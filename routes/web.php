@@ -15,3 +15,7 @@ use App\Http\Controllers\ProjectController;
 */
 
 Route::get('/', [ProjectController::class, 'getAllDepartments']);
+Route::post('showAppointments', [ProjectController::class, 'showAppointments'])->name('showAppointments')->middleware('auth');
+Route::post('bookAppointment', [ProjectController::class, 'bookAppointment'])->name('bookAppointment')->middleware('auth');
+Route::get('/myBookings', [ProjectController::class, 'myBookings'])->name('myBookings')->middleware('auth');
+Route::post('cancelBooking', [ProjectController::class, 'cancelBooking'])->name('cancelBooking')->middleware('auth');
