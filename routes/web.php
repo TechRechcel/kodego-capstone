@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\CreateTask;
 use App\Http\Livewire\ShowTask;
 use App\Http\Livewire\StoreTask;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +18,6 @@ use App\Http\Livewire\StoreTask;
 */
 
 Route::get('/', CreateTask::class);
+Route::get('login',[AuthController::class,'login']);
+Route::get('register',[AuthController::class,'register']);
+Route::get('forgot_password',[AuthController::class,'forgot_password']);
