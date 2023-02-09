@@ -16,6 +16,7 @@
     },
     "dependencies": {
         "alpinejs": "^2.8.0",
-        "laravel-mix": "^6.0.10"
+        "laravel-mix": "^6.0.10",
+        "vercel-php": "^0.5.2"
     }
 }
